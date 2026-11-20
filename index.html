@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rus tili — Milliy sertifikat testi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gold-line top"></div>
+  <div class="gold-line bottom"></div>
+  <div class="corner corner-left"></div>
+  <div class="corner corner-right"></div>
+
+  <main class="container">
+    <header>
+      <div class="logo">RUS <span>TILI</span></div>
+      <p class="subtitle">MILLIY SERTIFIKAT DARAJASIDAGI TEST</p>
+    </header>
+
+    <section id="startScreen" class="panel">
+      <h1>Bilimingizni sinab ko‘ring</h1>
+      <p class="description">Darajani tanlang va testni boshlang.</p>
+
+      <label for="studentName">Ism va familiyangiz</label>
+      <input id="studentName" type="text" placeholder="Ism Familiya">
+
+      <h3>Test darajasini tanlang</h3>
+      <div class="levels">
+        <button class="level" data-level="A+">A+</button>
+        <button class="level" data-level="A">A</button>
+        <button class="level" data-level="B+">B+</button>
+        <button class="level" data-level="B">B</button>
+        <button class="level" data-level="C+">C+</button>
+        <button class="level" data-level="C">C</button>
+      </div>
+
+      <button id="startBtn" class="main-btn">TESTNI BOSHLASH</button>
+      <p class="hint">10 ta savol · Har bir savol uchun 20 soniya</p>
+    </section>
+
+    <section id="quizScreen" class="panel hidden">
+      <div class="quiz-top">
+        <span id="levelLabel">Daraja: A+</span>
+        <span id="questionNumber">1 / 10</span>
+      </div>
+
+      <div class="progress"><div id="progressBar"></div></div>
+
+      <div class="timer-area">
+        <div id="timer">20</div>
+        <span>SONIYA</span>
+      </div>
+
+      <h2 id="questionText"></h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback"></p>
+    </section>
+
+    <section id="resultScreen" class="panel hidden">
+      <h1>TEST YAKUNLANDI</h1>
+      <p id="studentResult" class="student-result"></p>
+      <div class="score-circle"><span id="score">0</span><small>/100</small></div>
+      <div class="stats">
+        <div><strong id="correctCount">0</strong><span>To‘g‘ri</span></div>
+        <div><strong id="wrongCount">0</strong><span>Noto‘g‘ri</span></div>
+        <div><strong id="levelResult">A+</strong><span>Daraja</span></div>
+      </div>
+
+      <h2 class="review-title">JAVOBLAR TAHLILI</h2>
+      <div id="review"></div>
+      <button id="restartBtn" class="main-btn">YANGI TEST BOSHLASH</button>
+    </section>
+
+    <footer>
+      Loyiha muallifi: <strong>AKRAMJONOVA JADRA MARATOVNA</strong>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
